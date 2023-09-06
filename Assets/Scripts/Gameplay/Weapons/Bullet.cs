@@ -13,8 +13,6 @@ namespace ShooterPrototype.Gameplay.Weapons
             {
                 health.TakeDamage(damage);
             }
-
-            Destroy(gameObject);
         }
     }
 }

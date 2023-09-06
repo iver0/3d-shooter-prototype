@@ -21,13 +21,13 @@ namespace ShooterPrototype.Characters.Player
             _weapon = cameraPivot.GetComponentInChildren<Weapon>();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             var playerTransform = transform;
             var moveDirection = (
                 playerTransform.forward * _moveInput.y + playerTransform.right * _moveInput.x
             ).normalized;
-            _characterController.Move(moveDirection * (settings.moveSpeed * Time.fixedDeltaTime));
+            _characterController.Move(moveDirection * (settings.moveSpeed * Time.deltaTime));
         }
 
         private void LateUpdate()

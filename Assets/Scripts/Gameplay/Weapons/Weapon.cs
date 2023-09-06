@@ -45,7 +45,7 @@ namespace ShooterPrototype.Gameplay.Weapons
             ammo--;
             _animator.SetTrigger(shoot);
             _canShoot = false;
-            Destroy(bullet, 5f);
+            Destroy(bullet, 1f);
         }
 
         public void RecoilFinish()
